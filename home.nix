@@ -21,7 +21,49 @@
   home = {                                        # Specific packages for macbook
     packages = with pkgs; [
       # Terminal
+      neofetch
       pfetch
+      enpass
+      zathura
+      p7zip
+      mplayer
+      openvpn
+      redshift
+      blueman
+      spotify
+      flameshot
+
+      dmenu
+      copyq
+      conky
+      compton
+      arandr
+      feh
+      gnomeExtensions.caffeine
+      i3blocks
+      i3lock-pixeled
+      i3status
+      pasystray
+      pavucontrol
+      rofi
+      sysstat
+      xfce.thunar
+      xfce.thunar-volman
+      xfce.thunar-archive-plugin
+      xfce.thunar-dropbox-plugin
+      xorg.xkill
+      xorg.xbacklight
+
+      remmina
+      telegram-cli
+      signal-desktop
+
+      jetbrains.idea-ultimate
+      jetbrains.rider
+
+      qutebrowser
+      opera
+      google-chrome
     ];
     stateVersion = "22.05";
   };
@@ -35,17 +77,16 @@
       enableAutosuggestions = true;               # Auto suggest options and highlights syntact, searches in history for options
       enableSyntaxHighlighting = true;
       history.size = 10000;
+      enableCompletion = true;
+      autocd = true;
+      cdpath = ["~/Work" "~/Projects" "~/tmp"];
 
       oh-my-zsh = {                               # Extra plugins for zsh
         enable = true;
         plugins = [ "git" "thefuck"];
         theme = "robbyrussell";
-        enableCompletion = true;
-        enableAutosuggestions = true;
-        enableSyntaxHighlighting = true;
-        autocd = true;
-        cdpath = true;
       };
+
 
       initExtra = ''
         # Spaceship

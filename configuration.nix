@@ -30,14 +30,15 @@ in
     ];
   };
   networking.hostName = "nixos"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.networkmanager.enable = true;
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  services.connman.enable = true;
+  # services.connman.enable = true;
   #services.virtualbox.enable = true;
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.virtualbox.host.enable = true;
@@ -126,7 +127,7 @@ in
     isNormalUser = true;
     description = "Alfrheim";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel"  ];
+    extraGroups = [ "networkmanager" "wheel" "video" "audio" "plugdev"  ];
     packages = with pkgs; [
       firefox
       git
@@ -146,6 +147,10 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  iw
+  networkmanagerapplet
+  openresolv
+  git
   #  wget
   ];
 

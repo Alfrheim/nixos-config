@@ -93,6 +93,7 @@ in
         i3status
         i3lock
         i3blocks
+        polybar
       ];
       package = pkgs.i3-gaps;
     };
@@ -130,7 +131,6 @@ in
     extraGroups = [ "networkmanager" "wheel" "video" "audio" "plugdev"  ];
     packages = with pkgs; [
       firefox
-      git
       wget
     #  thunderbird
     ];
@@ -151,6 +151,8 @@ in
   networkmanagerapplet
   openresolv
   git
+  killall
+  tree
   #  wget
   ];
 

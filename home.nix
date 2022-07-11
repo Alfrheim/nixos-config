@@ -33,6 +33,7 @@
       spotify
       flameshot
 
+      albert
       dmenu
       copyq
       conky
@@ -40,10 +41,13 @@
       arandr
       feh
       gnomeExtensions.caffeine
-      i3blocks
       i3lock-pixeled
-      i3status
       pasystray
+
+      pamixer
+      guake
+      gxkb
+
       pavucontrol
       rofi
       sysstat
@@ -57,6 +61,7 @@
       remmina
       telegram-cli
       signal-desktop
+
 
       jetbrains.idea-ultimate
       jetbrains.rider

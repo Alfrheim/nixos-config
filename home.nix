@@ -146,5 +146,13 @@
         nmap <F6> :NERDTreeToggle<CR>             " F6 opens NERDTree
       '';
     };
+    vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+        dracula-theme.theme-dracula
+        vscodevim.vim
+        yzhang.markdown-all-in-one
+      ];
+    };
   };
 }

@@ -19,6 +19,9 @@
     ];
 
   home = {                                        # Specific packages for macbook
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
     packages = with pkgs; [
       # Terminal
       neofetch
@@ -88,7 +91,7 @@
 
       oh-my-zsh = {                               # Extra plugins for zsh
         enable = true;
-        plugins = [ "git" "thefuck"];
+        plugins = [ "git" ];
         theme = "robbyrussell";
       };
 

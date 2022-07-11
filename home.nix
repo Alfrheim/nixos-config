@@ -18,7 +18,8 @@
       ./modules/programs/alacritty.nix
     ];
 
-  home = {                                        # Specific packages for macbook
+
+  home = {                                        
     sessionVariables = {
       EDITOR = "nvim";
     };
@@ -72,6 +73,7 @@
       qutebrowser
       opera
       google-chrome
+      nodejs
     ];
     stateVersion = "22.05";
   };
@@ -80,6 +82,12 @@
     alacritty = {                                 # Terminal Emulator
       enable = true;
     };
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
     zsh = {                                       # Post installation script is run in configuration.nix to make it default shell
       enable = true;
       enableAutosuggestions = true;               # Auto suggest options and highlights syntact, searches in history for options

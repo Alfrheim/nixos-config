@@ -100,6 +100,15 @@ in
   };
 
   environment.pathsToLink = [ "/libexec" ];
+  environment.shellAliases = {
+    ls="ls --color=auto";
+    l="ls  --color=auto -la";
+    grep="grep -i --color=auto";
+    rm="rm --interactive --verbose";
+    mv="mv --interactive --verbose";
+    cp="cp --verbose";
+    ifconfig="ip -s -c -h a";
+  };
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

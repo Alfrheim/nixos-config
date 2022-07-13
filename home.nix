@@ -69,6 +69,8 @@
 
       jetbrains.idea-ultimate
       jetbrains.rider
+      jetbrains.webstorm
+      jetbrains.datagrip
 
       qutebrowser
       opera
